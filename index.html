@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robin Hoods Hinweis</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin:40px;
+}
+#hint, #nextButton{
+    display:none;
+    margin-top:30px;
+}
+.timer{
+    font-size:3em;
+    font-weight:bold;
+}
+button{
+    padding:12px 24px;
+    font-size:1.1em;
+}
+</style>
+</head>
+<body>
+
+<h1>Robin Hoods Geduldprobe</h1>
+
+<p>
+Wer die Wälder durchstreift, muss Geduld beweisen.
+Warte 15 Minuten, um den ersten Hinweis zu erhalten.
+</p>
+
+<div class="timer" id="timer">15:00</div>
+
+<div id="hint">
+    <h2>Hinweis</h2>
+    <p>
+        Suche dort, wo Bruder Tuck seinen Durst stillen würde.
+    </p>
+</div>
+
+<div id="nextButton">
+    <p>Brauchst du einen weiteren Hinweis?</p>
+    <button onclick="location.href='loesung.html'">
+        Ja, weiterer Hinweis
+    </button>
+</div>
+
+<script>
+let duration = 15 * 60;
+
+const timer = setInterval(function () {
+
+    let minutes = Math.floor(duration / 60);
+    let seconds = duration % 60;
+
+    document.getElementById("timer").innerHTML =
+        String(minutes).padStart(2,"0") + ":" +
+        String(seconds).padStart(2,"0");
+
+    duration--;
+
+    if (duration < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "Zeit abgelaufen";
+        document.getElementById("hint").style.display = "block";
+        document.getElementById("nextButton").style.display = "block";
+    }
+
+}, 1000);
+</script>
+
+</body>
+</html>

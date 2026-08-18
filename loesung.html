@@ -1,33 +1,113 @@
-<div class="timer" id="timer">1:00</div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der letzte Hinweis</title>
 
-<div id="solution">
-    <h2>Komplettlösung</h2>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+            background: #f5f1e8;
+            color: #2d2d2d;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #timer {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        #solution {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #eee;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Der letzte Hinweis</h1>
+
     <p>
-        Hier kommt die vollständige Lösung des Rätsels.
+        Du hast bereits einen Hinweis erhalten.
+        Wenn du noch immer nicht weiterkommst,
+        musst du Bruder Tuck noch etwas Geduld beweisen.
     </p>
+
+    <p>
+        Nach Ablauf der 15 Minuten erhältst du die Komplettlösung.
+    </p>
+
+    <div id="timer">15:00</div>
+
+    <div id="solution">
+        <h2>Komplettlösung</h2>
+
+        <p>
+            HIER DEINE KOMPLETTLÖSUNG EINTRAGEN.
+        </p>
+    </div>
+
 </div>
 
 <script>
-let duration = 1 * 60;
 
-const timer = setInterval(function () {
+    // 15 Minuten = 900 Sekunden
+    let remaining = 15 * 60;
 
-    let minutes = Math.floor(duration / 60);
-    let seconds = duration % 60;
+    const timerElement = document.getElementById("timer");
+    const solutionElement = document.getElementById("solution");
 
-    document.getElementById("timer").innerHTML =
-        String(minutes).padStart(2,"0") + ":" +
-        String(seconds).padStart(2,"0");
+    function updateTimer() {
 
-    duration--;
+        const minutes = Math.floor(remaining / 60);
+        const seconds = remaining % 60;
 
-    if (duration < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "Zeit abgelaufen";
-        document.getElementById("solution").style.display = "block";
+        timerElement.textContent =
+            String(minutes).padStart(2, "0") +
+            ":" +
+            String(seconds).padStart(2, "0");
+
+        if (remaining <= 0) {
+
+            clearInterval(countdown);
+
+            timerElement.textContent = "00:00";
+
+            solutionElement.style.display = "block";
+
+            return;
+        }
+
+        remaining--;
     }
 
-}, 1000);
+    updateTimer();
+
+    const countdown = setInterval(updateTimer, 1000);
+
 </script>
 
 </body>

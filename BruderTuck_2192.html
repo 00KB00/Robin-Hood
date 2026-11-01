@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCBNJAH: Robin Hood - Das Geheimnis des Stadtwaldes - Hinweise</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<h2>Station 06: Azeem</h2>
+
+<p>Wer die Wälder durchstreift muss Geduld beweisen. <br>
+  Nach 5 Minuten wirst du einen Tipp bekommen.
+</p>
+
+<div class="timer", id="Timer1_Station06"></div>
+<div id="Hint1_Station06", class="hint">
+  <button id="Hint1_Station06_Button">Hinweis aufdecken</button>
+  <p>Das Auge kann euch täuschen. Wo ihr nichts erkennen könnt, kann dennoch etwas verborgen sein. Eure Ausrüstung wird euch weiterhelfen.</p>
+</div>
+
+<p>
+  Nach weiteren 10 Minuten wirst du die nächsten Koordinaten erhalten.
+</p>
+
+
+<div class="timer", id="Timer2_Station06"></div>
+<div id="Loesung_Station06", class="hint">
+  <button id="Loesung_Station06_Button">Hinweis aufdecken</button>
+  <p>Mit UV-Licht erkennt ihr auf dem Boden einiger Krüge die Zahlen der Koordinaten samt Reihenfolge: N 47° 56.585′ E 10° 11.054′</p>
+</div>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(5, 'Timer1_Station06', 'Hint1_Station06_Button');
+        });
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(15, 'Timer2_Station06', 'Loesung_Station06_Button');
+        });
+</script>
+</html>

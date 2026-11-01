@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCBNJAH: Robin Hood - Das Geheimnis des Stadtwaldes - Hinweise</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<h2>Station 02: Die Waffenkammer des Sheriffs</h2>
+
+<p>Wer die Wälder durchstreift muss Geduld beweisen. <br>
+  Nach 5 Minuten wirst du einen Tipp bekommen.
+</p>
+
+<div class="timer", id="Timer1_Station12"></div>
+<div id="Hint1_Station12", class="hint">
+  <button id="Hint1_Station12_Button">Hinweis aufdecken</button>
+  <p>Nicht nur die Klinge soll eure Aufmerksamkeit fesseln. Schaut euch genauer an, was zwischen Klinge und Hand verborgen liegt.</p>
+</div>
+
+<p>Nach 5 Minuten wirst du einen weiteren Tipp bekommen.
+</p>
+
+<div class="timer", id="Timer2_Station12"></div>
+<div id="Hint2_Station01", class="hint">
+  <button id="Hint2_Station12_Button">Hinweis aufdecken</button>
+  <p>Die Schablone die ihr im Schaft des Schwertes gefunden habt, passt nur auf eine gekrümmte Klinge.</p>
+</div>
+
+<p>
+  Nach weiteren 10 Minuten wirst du die nächsten Koordinaten erhalten.
+</p>
+
+<div class="timer", id="Timer3_Station12"></div>
+<div id="Loesung_Station12", class="hint">
+  <button id="Loesung_Station12_Button">Hinweis aufdecken</button>
+  <p>Mit der Schablone könnt ihr die folgenden Koordinaten ablesen: N 47° 56.530′ E 10° 11.173′</p>
+</div>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(5, 'Timer1_Station12', 'Hint1_Station12_Button');
+        });
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(10, 'Timer2_Station12', 'Hint2_Station12_Button');
+        });
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(20, 'Timer3_Station12', 'Loesung_Station12_Button');
+        });
+</script>
+</html>

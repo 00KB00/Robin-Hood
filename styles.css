@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin:40px;
+}
+.hint {
+    margin-top: 30px;
+}
+
+.hint button,
+.hint p {
+    display: none;
+}
+.hint p{
+    border: 5px green solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+.timer{
+    font-size:3em;
+    font-weight:bold;
+}
+.div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    padding:12px 24px;
+    font-size:1.1em;
+    margin: 0 auto;
+}

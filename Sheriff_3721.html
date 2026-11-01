@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCBNJAH: Robin Hood - Das Geheimnis des Stadtwaldes - Hinweise</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<h2>Station 01: Sheriff George von Nottingham </h2>
+
+<p>Wer die Wälder durchstreift muss Geduld beweisen. <br>
+  Nach 5 Minuten wirst du einen Tipp bekommen.
+</p>
+
+<div class="timer", id="Timer1_Station11"></div>
+<div id="Hint1_Station11", class="hint">
+  <button id="Hint1_Station11_Button">Hinweis aufdecken</button>
+  <p>MManche Botschaften zeigen sich erst unter einer besonderen Form von Licht.</p>
+</div>
+
+<p>
+  Nach weiteren 10 Minuten wirst du die nächsten Koordinaten erhalten.
+</p>
+
+
+<div class="timer", id="Timer2_Station11"></div>
+<div id="Loesung_Station11", class="hint">
+  <button id="Loesung_Station01_Button">Hinweis aufdecken</button>
+  <p>Der UV Code auf dem Holzschwert lautet: 6431</p>
+</div>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(5, 'Timer1_Station01', 'Hint1_Station11_Button');
+        });
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(15, 'Timer2_Station01', 'Loesung_Station11_Button');
+        });
+</script>
+</html>

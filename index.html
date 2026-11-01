@@ -5,25 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Robin Hoods Hinweis</title>
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    text-align:center;
-    margin:40px;
-}
-#hint, #nextButton{
-    display:none;
-    margin-top:30px;
-}
-.timer{
-    font-size:3em;
-    font-weight:bold;
-}
-button{
-    padding:12px 24px;
-    font-size:1.1em;
-}
-</style>
+<style></style>
+<script src="script.js"></script>
 </head>
 <body>
 
@@ -34,14 +17,17 @@ Wer die Wälder durchstreift, muss Geduld beweisen.
 Warte 15 Minuten, um den ersten Hinweis zu erhalten.
 </p>
 
-<div class="timer" id="timer">1:00</div>
+<div class="timer" id="timer1"></div>
 
-<div id="hint">
+<div id="hint1">
     <h2>Hinweis</h2>
     <p>
         Suche dort, wo Bruder Tuck seinen Durst stillen würde.
     </p>
 </div>
+
+//klappt: button geht aber nicht weg
+<button onclick="startCountdown(1,'timer1', 'hint1')">1-minTimer</button>
 
 <div id="nextButton">
     <p>Brauchst du einen weiteren Hinweis?</p>
@@ -51,27 +37,73 @@ Warte 15 Minuten, um den ersten Hinweis zu erhalten.
 </div>
 
 <script>
-let duration = 1 * 60;
+// function foo(startTime, timeUntilHint){
+//   endTime = (startTime + (timeUntilHint*60*1000))
+//   console.log(startTime);
+//   console.log(endTime);
+//   minutes = 5;
+//   seconds = 0;
 
-const timer = setInterval(function () {
+//   const now = Date.now();
+//   if(now < endTime){
+//     minutes = Math.floor((endTime-now)/1000/60)
+//     seconds = Math.floor((endTime-now)/1000 % 60)
 
-    let minutes = Math.floor(duration / 60);
-    let seconds = duration % 60;
+//     document.getElementById("timer").innerHTML = String(minutes).padStart(2,0) + ":" + String(seconds).padStart(2,0) ;
+//   } else {
+//     document.getElementById("timer").innerHTML = "Zeit abgelaufen";
+//     clearInterval(countdown);
+//   }
+// }
 
-    document.getElementById("timer").innerHTML =
-        String(minutes).padStart(2,"0") + ":" +
-        String(seconds).padStart(2,"0");
+// const now = Date.now()
+// const countdown = setInterval(foo(now, 1), 1000);
 
-    duration--;
+// const startTime = Date.now();
+// const endTime = (startTime + (5*60*1000));
 
-    if (duration < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "Zeit abgelaufen";
-        document.getElementById("hint").style.display = "block";
-        document.getElementById("nextButton").style.display = "block";
-    }
+// function foo(){
+//   console.log(startTime);
+//   console.log(endTime);
+//   minutes = 5;
+//   seconds = 0;
 
-}, 1000);
+//   const now = Date.now();
+//   if(now < endTime){
+//     minutes = Math.floor((endTime-now)/1000/60)
+//     seconds = Math.floor((endTime-now)/1000 % 60)
+
+//     document.getElementById("timer").innerHTML = String(minutes).padStart(2,0) + ":" + String(seconds).padStart(2,0) ;
+//   } else {
+//     document.getElementById("timer").innerHTML = "Zeit abgelaufen";
+//     clearInterval(countdown);
+//   }
+// }
+
+// foo();
+
+// const countdown = setInterval(foo, 1000);
+
+
+// const timer = setInterval(function () {
+
+//     let minutes = Math.floor(duration / 60);
+//     let seconds = duration % 60;
+
+//     document.getElementById("timer").innerHTML =
+//         String(minutes).padStart(2,"0") + ":" +
+//         String(seconds).padStart(2,"0");
+
+//     duration--;
+
+//     if (duration < 0) {
+//         clearInterval(timer);
+//         document.getElementById("timer").innerHTML = "Zeit abgelaufen";
+//         document.getElementById("hint").style.display = "block";
+//         document.getElementById("nextButton").style.display = "block";
+//     }
+
+// }, 1000);
 </script>
 
 </body>

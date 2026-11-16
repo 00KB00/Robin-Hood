@@ -7,34 +7,46 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
 </head>
-<h2>Station 01: Azeem</h2>
+<h2>Station 07: Will Scarlet</h2>
 
 <p>Wer die Wälder durchstreift muss Geduld beweisen. <br>
   Nach 5 Minuten wirst du einen Tipp bekommen.
 </p>
 
-<div class="timer", id="Timer1_Station01"></div>
-<div id="Hint1_Station01", class="hint">
-  <button id="Hint1_Station01_Button">Hinweis aufdecken</button>
-  <p>Mit dem Fernglas entdeckt ihr in den Bäumen zwei Reitergruppen mit unterschiedlichen Farben.</p>
+<div class="timer", id="Timer1_Station17"></div>
+<div id="Hint1_Station17", class="hint">
+  <button id="Hint1_Station17_Button">Hinweis aufdecken</button>
+  <p>Sechs Ringe führen euch zu den Koordinaten. Teilt sie gerecht auf: Die eine Hälfte gehört dem Norden, die andere dem Osten.</p>
 </div>
 
 <p>
-  Nach weiteren 5 Minuten wirst du die nächsten Koordinaten erhalten.
+   Nach 5 Minuten wirst du einen weiteren Tipp bekommen.
 </p>
 
+<div class="timer", id="Timer2_Station17"></div>
+<div id="Hint2_Station17", class="hint">
+  <button id="Hint2_Station17_Button">Hinweis aufdecken</button>
+  <p>Nicht jeder Buchstabe ist für euch bestimmt. Lasst einen stehen und nehmt den nächsten – und wiederholt dieses Muster..</p>
+</div>
 
-<div class="timer", id="Timer2_Station01"></div>
-<div id="Loesung_Station01", class="hint">
-  <button id="Loesung_Station01_Button">Hinweis aufdecken</button>
-  <p>Die grüne Reitergruppe trägt 102, die orange Reitergruppe 002. Die nächste Station befindet sich bei N 47° 57.102′ E 10° 11.002′</p>
+<p>
+  Nach weiteren 10 Minuten wirst du die nächsten Koordinaten erhalten.
+</p>
+
+<div class="timer", id="Timer3_Station17"></div>
+<div id="Loesung_Station17", class="hint">
+  <button id="Loesung_Station17_Button">Hinweis aufdecken</button>
+  <p>Wenn ihr bei den passenden Ringe jeden zweiten Buchstaben verwendet, könnt ihr folgende Koordinaten ablesen: N 47° 57.079′ E 10° 10.678′</p>
 </div>
 <script>
 window.addEventListener("DOMContentLoaded", function () {
-            startCountdown(5, 'Timer1_Station01', 'Hint1_Station01_Button');
+            startCountdown(5, 'Timer1_Station17', 'Hint1_Station17_Button');
         });
 window.addEventListener("DOMContentLoaded", function () {
-            startCountdown(10, 'Timer2_Station01', 'Loesung_Station01_Button');
+            startCountdown(10, 'Timer2_Station17', 'Hint2_Station17_Button');
+        });
+window.addEventListener("DOMContentLoaded", function () {
+            startCountdown(20, 'Timer3_Station17', 'Loesung_Station17_Button');
         });
 </script>
 </html>

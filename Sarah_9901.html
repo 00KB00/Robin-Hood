@@ -7,34 +7,35 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
 </head>
-<h2>Station 01: Azeem</h2>
+<h2>Station 05: Sarah</h2>
 
 <p>Wer die Wälder durchstreift muss Geduld beweisen. <br>
   Nach 5 Minuten wirst du einen Tipp bekommen.
 </p>
 
-<div class="timer", id="Timer1_Station01"></div>
-<div id="Hint1_Station01", class="hint">
-  <button id="Hint1_Station01_Button">Hinweis aufdecken</button>
-  <p>Mit dem Fernglas entdeckt ihr in den Bäumen zwei Reitergruppen mit unterschiedlichen Farben.</p>
+<div class="timer", id="Timer1_Station15"></div>
+<div id="Hint1_Station15", class="hint">
+  <button id="Hint1_Station15_Button">Hinweis aufdecken</button>
+  <p>Wo Schatten etwas verbergen, kann helles Licht die Wahrheit ans Tageslicht bringen.</p>
 </div>
 
 <p>
-  Nach weiteren 5 Minuten wirst du die nächsten Koordinaten erhalten.
+  Nach weiteren 10 Minuten wirst du die nächsten Koordinaten erhalten.
 </p>
 
 
-<div class="timer", id="Timer2_Station01"></div>
-<div id="Loesung_Station01", class="hint">
-  <button id="Loesung_Station01_Button">Hinweis aufdecken</button>
-  <p>Die grüne Reitergruppe trägt 102, die orange Reitergruppe 002. Die nächste Station befindet sich bei N 47° 57.102′ E 10° 11.002′</p>
+<div class="timer", id="Timer2_Station15"></div>
+<div id="Loesung_Station15", class="hint">
+  <button id="Loesung_Station15_Button">Hinweis aufdecken</button>
+  <p>Wenn ihr mit der Taschenlampe von hinten durch die Nachricht leuchtet, findet ihr die Koordinaten:
+N 47° 56.990′ E 10° 10.703′</p>
 </div>
 <script>
 window.addEventListener("DOMContentLoaded", function () {
-            startCountdown(5, 'Timer1_Station01', 'Hint1_Station01_Button');
+            startCountdown(5, 'Timer1_Station15', 'Hint1_Station15_Button');
         });
 window.addEventListener("DOMContentLoaded", function () {
-            startCountdown(10, 'Timer2_Station01', 'Loesung_Station01_Button');
+            startCountdown(15, 'Timer2_Station15', 'Loesung_Station15_Button');
         });
 </script>
 </html>
